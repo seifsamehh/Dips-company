@@ -1,0 +1,17 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+.maintenance-content {
+  .intro {
+    background-image: url("../../assests/images/maintence-bg.webp");
+  }
+  p {
+    span {
+      font-family: "Roboto Slab", serif;
+      font-size: 1.2rem;
+      color: $main;
+    }
+  }
+}

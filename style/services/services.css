@@ -1,0 +1,192 @@
+.services-page .intro {
+  background-image: url("../../assests/images/Petroleum-Services.webp");
+}
+.services-page .pages .page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .services-page .pages .page {
+    position: relative;
+    flex-wrap: wrap;
+  }
+}
+.services-page .pages .page::before {
+  font-family: "Roboto Slab", serif;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: 10rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #a00808;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .services-page .pages .page::before {
+    -webkit-text-stroke-color: #fff;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .services-page .pages .page::before {
+    right: 3%;
+    font-size: 7rem;
+  }
+}
+.services-page .pages .page .left {
+  width: 50%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.services-page .pages .page .left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 768px) {
+  .services-page .pages .page .left {
+    width: 100%;
+    height: 500px;
+  }
+}
+.services-page .pages .page .right {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .services-page .pages .page .right {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.services-page .pages .page .right h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  color: #a00808;
+}
+.services-page .pages .page .right p {
+  margin: 3rem 0;
+  line-height: 2;
+}
+.services-page .pages .page .right button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #a00808;
+  color: #fff;
+}
+.services-page .pages .page .right button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+.services-page .pages .page .right button:hover span {
+  color: #fff;
+}
+.services-page .pages .page .right button::before,
+.services-page .pages .page .right button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.services-page .pages .page .right button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.services-page .pages .page .right button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.services-page .pages .page-1::before {
+  content: "01";
+}
+.services-page .pages .page-1 .left {
+  background-image: url("../../assests/images/ndt-bg.webp");
+}
+.services-page .pages .page-2::before {
+  content: "02";
+}
+.services-page .pages .page-2 .left {
+  background-image: url("../../assests/images/Advanced-bg.webp");
+}
+.services-page .pages .page-3::before {
+  content: "03";
+}
+.services-page .pages .page-3 .left {
+  background-image: url("../../assests/images/redio-bg.webp");
+}
+.services-page .pages .page-4::before {
+  content: "04";
+}
+.services-page .pages .page-4 .left {
+  background-image: url("../../assests/images/Lifting-Inspection-bg.webp");
+}
+.services-page .pages .page-5::before {
+  content: "05";
+}
+.services-page .pages .page-5 .left {
+  background-image: url("../../assests/images/Dropped-object-survey-bg.webp");
+}
+.services-page .pages .page-6::before {
+  content: "06";
+}
+.services-page .pages .page-6 .left {
+  background-image: url("../../assests/images/painting-bg.webp");
+}
+.services-page .pages .page-7::before {
+  content: "07";
+}
+.services-page .pages .page-7 .left {
+  background-image: url("../../assests/images/image6.webp");
+}
+.services-page .pages .page-8::before {
+  content: "08";
+}
+.services-page .pages .page-8 .left {
+  background-image: url("../../assests/images/sand-bg.webp");
+}
+.services-page .pages .page-9::before {
+  content: "09";
+}
+.services-page .pages .page-9 .left {
+  background-image: url("../../assests/images/rescue-bg.webp");
+}
+.services-page .pages .page-10::before {
+  content: "10";
+}
+.services-page .pages .page-10 .left {
+  background-image: url("../../assests/images/maintence-bg.webp");
+}/*# sourceMappingURL=services.css.map */

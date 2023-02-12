@@ -1,0 +1,32 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+.non-ndt-content {
+  .intro {
+    background-image: url("../../assests/images/Advanced-bg.webp");
+  }
+  .contents {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .content {
+      width: 400px;
+      height: 100%;
+      h2 {
+        font-family: "Roboto Slab", serif;
+        color: $main;
+      }
+      p {
+        span {
+          font-family: "Roboto Slab", serif;
+          font-size: 1.2rem;
+          color: $main;
+        }
+      }
+    }
+  }
+}

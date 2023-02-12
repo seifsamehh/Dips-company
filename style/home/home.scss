@@ -1,0 +1,167 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+// start intro
+.video-container {
+  position: relative;
+  height: 100vh;
+  .video {
+    min-width: 100%;
+    min-height: 100%;
+    @media screen and (max-width: 1200px) {
+      max-width: 100%;
+      height: 100vh;
+    }
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $light;
+    img {
+      width: 30%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+// end intro
+// start boxs-section
+.boxs-section {
+  .boxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      width: 50%;
+      height: 80vh;
+      overflow: hidden;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: 0.3s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(161, 10, 10, 0.5),
+          rgba(28, 24, 16, 0.5)
+        );
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $light;
+        font-size: 4rem;
+        text-align: center;
+        @media screen and (max-width: 992px) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .box-12 {
+      background-color: $light;
+      &:hover {
+        transform: scale(1);
+      }
+      p {
+        font-family: "Roboto Slab", serif;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $main;
+        font-size: 1.3rem;
+        text-align: center;
+        span {
+          font-size: 2.3rem;
+          font-weight: 600;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+    }
+  }
+}
+// end boxs-section
+// start sponsers
+.sponsers {
+  padding: 3rem 0;
+  .container {
+    .companies {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+      .company-1,
+      .company-2,
+      .company-3,
+      .company-4 {
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+          @media (min-width: 769px) and (max-width: 992px) {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+// end sponsers

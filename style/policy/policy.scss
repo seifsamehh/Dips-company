@@ -1,0 +1,60 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+// start policy
+.policy {
+  padding: 3rem 0;
+  background-image: url("../../assests/images/bbblurry.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
+  .container {
+    .row {
+      .col-sm-6 {
+        .left,
+        .right {
+          p {
+            line-height: 2;
+            font-size: 1.1rem;
+            @media screen and (max-width: 768px) {
+              text-align: center;
+            }
+          }
+        }
+        .left {
+          span {
+            color: $main;
+            font-weight: 600;
+          }
+        }
+        .right {
+          .middle {
+            ul {
+              list-style: none;
+              li {
+                margin: 1rem 0;
+                font-size: 1.1rem;
+                @media screen and (max-width: 768px) {
+                  text-align: center;
+                }
+                &::before {
+                  content: "\2022";
+                  color: $main;
+                  font-weight: bold;
+                  display: inline-block;
+                  width: 1rem;
+                  margin-left: -1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end policy

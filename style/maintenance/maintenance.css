@@ -1,0 +1,8 @@
+.maintenance-content .intro {
+  background-image: url("../../assests/images/maintence-bg.webp");
+}
+.maintenance-content p span {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  color: #a00808;
+}/*# sourceMappingURL=maintenance.css.map */

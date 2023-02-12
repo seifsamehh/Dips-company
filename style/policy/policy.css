@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.policy {
+  padding: 3rem 0;
+  background-image: url("../../assests/images/bbblurry.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 768px) {
+  .policy {
+    background-image: none;
+  }
+}
+.policy .container .row .col-sm-6 .left p,
+.policy .container .row .col-sm-6 .right p {
+  line-height: 2;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .policy .container .row .col-sm-6 .left p,
+  .policy .container .row .col-sm-6 .right p {
+    text-align: center;
+  }
+}
+.policy .container .row .col-sm-6 .left span {
+  color: #a00808;
+  font-weight: 600;
+}
+.policy .container .row .col-sm-6 .right .middle ul {
+  list-style: none;
+}
+.policy .container .row .col-sm-6 .right .middle ul li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .policy .container .row .col-sm-6 .right .middle ul li {
+    text-align: center;
+  }
+}
+.policy .container .row .col-sm-6 .right .middle ul li::before {
+  content: "•";
+  color: #a00808;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1em;
+}/*# sourceMappingURL=policy.css.map */

@@ -1,0 +1,17 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+.irata-content {
+  .intro {
+    background-image: url("../../assests/images/image6.webp");
+  }
+  .right {
+    span {
+      font-family: "Roboto Slab", serif;
+      font-size: 1.2rem;
+      color: $main;
+    }
+  }
+}

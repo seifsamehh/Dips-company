@@ -1,0 +1,372 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+//start global components
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  // font-family: 'Roboto Slab', serif;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+a,
+img,
+video,
+button {
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+ul {
+  padding-left: 0;
+}
+section {
+  h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    user-select: none;
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+main {
+  background-image: repeating-linear-gradient(
+      45deg,
+      $light 0px,
+      $light 10px,
+      transparent 10px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      $light 0px,
+      $light 10px,
+      transparent 10px,
+      transparent 11px
+    ),
+    linear-gradient(90deg, $main, $main);
+}
+.container {
+  padding: 2rem;
+  border-radius: 5px;
+  backdrop-filter: saturate(180%) blur(5px);
+  background: rgba(255, 255, 255, 0.4);
+}
+.intro {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: clip-path 0.5s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  h1 {
+    position: relative;
+    z-index: 1;
+    padding: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $light;
+    backdrop-filter: saturate(180%) blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    border-radius: 5px;
+    mix-blend-mode: screen;
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+      margin: 1rem;
+      font-size: 2rem;
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+}
+.scrolled.intro {
+  clip-path: polygon(0 0, 76% 0, 100% 100%, 22% 100%);
+}
+// start loader
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  position: relative;
+  z-index: 3;
+
+  .flame {
+    position: relative;
+    top: 5%;
+    left: 0.5%;
+    width: 5%;
+    @media screen and (max-width: 768px) {
+      width: 20%;
+      left: 3%;
+    }
+  }
+  .logo {
+    width: 20%;
+    @media screen and (max-width: 768px) {
+      width: 70%;
+    }
+  }
+  svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+    margin-top: 2rem;
+  }
+
+  circle {
+    fill: none;
+    stroke: $main;
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+  }
+
+  @keyframes rotate4 {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash4 {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -35px;
+    }
+
+    100% {
+      stroke-dashoffset: -125px;
+    }
+  }
+}
+// end loader
+// start selection
+::selection {
+  background-color: $dark;
+  color: $light;
+}
+// end selection
+// start scrollbar
+::-webkit-scrollbar {
+  width: 0;
+}
+// end scrollbar
+// start header
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid $main;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  .special {
+    color: $main !important;
+  }
+  img {
+    width: 10%;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      width: 35%;
+    }
+  }
+  .lg-nav {
+    display: flex;
+    gap: 1.2rem;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    a {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+  .small-screen {
+    button {
+      border: none;
+    }
+    .btn-close {
+      border: none;
+      box-shadow: none;
+    }
+    .offcanvas-header {
+      h2 {
+        font-family: "Roboto Slab", serif;
+        font-size: 2rem;
+      }
+    }
+    .offcanvas-body {
+      width: 100%;
+      height: 100vh;
+      background-color: $light;
+      .small-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        a {
+          color: $main;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    .bar {
+      display: block;
+      width: 0;
+      height: inherit;
+      background-color: $main;
+    }
+  }
+}
+// end header
+// start underline
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: $main;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+// end underline
+// start footer
+footer {
+  .social {
+    border-bottom: 2px solid $main;
+    .social-text {
+      color: $dark;
+    }
+    .bi-facebook {
+      color: #3b5998;
+    }
+    .bi-twitter {
+      color: #00acee;
+    }
+    .bi-linkedin {
+      color: #0072b1;
+    }
+  }
+  .breif {
+    img {
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $dark;
+      span {
+        color: $main;
+        font-weight: 600;
+      }
+    }
+    h6 {
+      font-family: "Roboto Slab", serif;
+      color: $main;
+    }
+    .contact-part {
+      p {
+        display: flex;
+        gap: 1rem;
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+          align-items: flex-start;
+        }
+      }
+      a {
+        color: $dark;
+      }
+      svg {
+        color: $main;
+      }
+      .special-svg {
+        color: $light;
+      }
+    }
+  }
+  .copyright {
+    color: $dark;
+    span {
+      font-family: "Roboto Slab", serif;
+      color: $main;
+    }
+    .arrow {
+      cursor: pointer;
+      color: $main;
+      margin-left: 3rem;
+    }
+  }
+}
+// end footer
+//end global components

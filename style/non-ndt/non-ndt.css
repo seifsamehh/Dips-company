@@ -1,0 +1,23 @@
+.non-ndt-content .intro {
+  background-image: url("../../assests/images/Advanced-bg.webp");
+}
+.non-ndt-content .contents {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.non-ndt-content .contents .content {
+  width: 400px;
+  height: 100%;
+}
+.non-ndt-content .contents .content h2 {
+  font-family: "Roboto Slab", serif;
+  color: #a00808;
+}
+.non-ndt-content .contents .content p span {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  color: #a00808;
+}/*# sourceMappingURL=non-ndt.css.map */

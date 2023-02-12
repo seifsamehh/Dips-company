@@ -1,0 +1,218 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+// start services
+.services-page {
+  .intro {
+    background-image: url("../../assests/images/Petroleum-Services.webp");
+  }
+  .pages {
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      background-color: $light;
+      border-radius: 5px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      @media screen and (max-width: 768px) {
+        position: relative;
+        flex-wrap: wrap;
+      }
+      &::before {
+        font-family: "Roboto Slab", serif;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        font-size: 10rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $main;
+        z-index: 1;
+        @media screen and (max-width: 768px) {
+          -webkit-text-stroke-color: $light;
+        }
+        @media (min-width: 769px) and (max-width: 992px) {
+          right: 3%;
+          font-size: 7rem;
+        }
+      }
+      .left {
+        width: 50%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          height: 500px;
+        }
+      }
+      .right {
+        width: 50%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          padding: 1rem;
+        }
+        h2 {
+          font-family: "Roboto Slab", serif;
+          font-size: 2rem;
+          color: $main;
+        }
+        p {
+          margin: 3rem 0;
+          line-height: 2;
+        }
+        button {
+          outline: none;
+          cursor: pointer;
+          border: none;
+          padding: 0.9rem 2rem;
+          margin: 0;
+          font-family: inherit;
+          font-size: inherit;
+          position: relative;
+          display: inline-block;
+          letter-spacing: 0.05rem;
+          font-weight: 700;
+          font-size: 17px;
+          border-radius: 500px;
+          overflow: hidden;
+          background: $main;
+          color: $light;
+        }
+
+        button span {
+          position: relative;
+          z-index: 10;
+          transition: color 0.4s;
+        }
+
+        button:hover span {
+          color: $light;
+        }
+
+        button::before,
+        button::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+
+        button::before {
+          content: "";
+          background: $dark;
+          width: 120%;
+          left: -10%;
+          transform: skew(30deg);
+          transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        button:hover::before {
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+    }
+    .page-1 {
+      &::before {
+        content: "01";
+      }
+      .left {
+        background-image: url("../../assests/images/ndt-bg.webp");
+      }
+    }
+    .page-2 {
+      &::before {
+        content: "02";
+      }
+      .left {
+        background-image: url("../../assests/images/Advanced-bg.webp");
+      }
+    }
+    .page-3 {
+      &::before {
+        content: "03";
+      }
+      .left {
+        background-image: url("../../assests/images/redio-bg.webp");
+      }
+    }
+    .page-4 {
+      &::before {
+        content: "04";
+      }
+      .left {
+        background-image: url("../../assests/images/Lifting-Inspection-bg.webp");
+      }
+    }
+    .page-5 {
+      &::before {
+        content: "05";
+      }
+      .left {
+        background-image: url("../../assests/images/Dropped-object-survey-bg.webp");
+      }
+    }
+    .page-6 {
+      &::before {
+        content: "06";
+      }
+      .left {
+        background-image: url("../../assests/images/painting-bg.webp");
+      }
+    }
+    .page-7 {
+      &::before {
+        content: "07";
+      }
+      .left {
+        background-image: url("../../assests/images/image6.webp");
+      }
+    }
+    .page-8 {
+      &::before {
+        content: "08";
+      }
+      .left {
+        background-image: url("../../assests/images/sand-bg.webp");
+      }
+    }
+    .page-9 {
+      &::before {
+        content: "09";
+      }
+      .left {
+        background-image: url("../../assests/images/rescue-bg.webp");
+      }
+    }
+    .page-10 {
+      &::before {
+        content: "10";
+      }
+      .left {
+        background-image: url("../../assests/images/maintence-bg.webp");
+      }
+    }
+  }
+}
+// end services

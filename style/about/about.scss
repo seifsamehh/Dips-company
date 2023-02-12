@@ -1,0 +1,208 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+// start about
+.about-page {
+  .intro {
+    background-image: url("../../assests/images/about-bg.webp");
+  }
+  .about-content {
+    margin-top: 3rem;
+    .container {
+      .row {
+        @media screen and (max-width: 768px) {
+          flex-wrap: wrap;
+        }
+        .col-sm-6 {
+          .left {
+            p {
+              line-height: 2;
+              font-size: 1.1rem;
+              @media screen and (max-width: 768px) {
+                text-align: center;
+              }
+              span {
+                color: $main;
+                font-weight: 600;
+              }
+            }
+          }
+          .right {
+            .up,
+            .bottom {
+              h2 {
+                font-family: "Roboto Slab", serif;
+                color: $main;
+                @media screen and (max-width: 768px) {
+                  text-align: center;
+                }
+              }
+              p {
+                line-height: 2;
+                font-size: 1.1rem;
+                @media screen and (max-width: 768px) {
+                  text-align: center;
+                }
+              }
+            }
+            .up {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  h4 {
+    font-family: "Roboto Slab", serif;
+    color: $main;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+      &::before {
+        content: "\2022";
+        color: $main;
+        font-weight: bold;
+        display: inline-block;
+        width: 1rem;
+        margin-left: -1em;
+      }
+    }
+  }
+}
+// start policy
+.policy {
+  .container {
+    .row {
+      .col-sm-6 {
+        .left,
+        .right {
+          p {
+            line-height: 2;
+            font-size: 1.1rem;
+            @media screen and (max-width: 768px) {
+              text-align: center;
+            }
+          }
+        }
+        .left {
+          span {
+            color: $main;
+            font-weight: 600;
+          }
+          img {
+            width: 50%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          }
+        }
+        .right {
+          .middle {
+            ul {
+              list-style: none;
+              li {
+                margin: 1rem 0;
+                font-size: 1.1rem;
+                @media screen and (max-width: 768px) {
+                  text-align: center;
+                }
+                &::before {
+                  content: "\2022";
+                  color: $main;
+                  font-weight: bold;
+                  display: inline-block;
+                  width: 1rem;
+                  margin-left: -1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end policy
+.gallery {
+  min-height: 100vh;
+  margin: 3rem 0;
+  .gallery-boxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .box {
+      width: 30%;
+      height: 300px;
+      overflow: hidden;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.company-certificates {
+  .certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    img {
+      width: 30%;
+      height: 100%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
+.quote {
+  height: 100vh;
+  background-image: url("../../assests/images/block.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .special {
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+    h3 {
+      font-family: "Roboto Slab", serif;
+      color: $light;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+// end about

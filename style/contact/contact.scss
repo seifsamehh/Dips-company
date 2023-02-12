@@ -1,0 +1,141 @@
+//start global varibales
+$light: #fff;
+$dark: #000;
+$main: #a00808;
+//end global varibales
+// start contact
+.contact {
+  .intro {
+    background-image: url("../../assests/images/contactusbanner.webp");
+  }
+  .container {
+    .row {
+      .col-sm-6 {
+        .left {
+          form {
+            @media screen and (max-width: 768px) {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .name,
+            .email,
+            .message {
+              label {
+                font-family: "Roboto Slab", serif;
+                color: $main;
+                font-size: 1.1rem;
+              }
+              input,
+              textarea {
+                box-shadow: none;
+                border: 2px solid $dark;
+                caret-color: $main;
+                &::placeholder {
+                  color: $dark;
+                }
+              }
+            }
+            .email {
+              margin: 2rem 0;
+            }
+            button {
+              font-size: 20px;
+              background: $main;
+              color: $light;
+              padding: 0.7em 1em;
+              padding-left: 0.9em;
+              margin-top: 2rem;
+              display: flex;
+              align-items: center;
+              border: none;
+              border-radius: 16px;
+              overflow: hidden;
+              transition: all 0.2s;
+            }
+
+            button span {
+              display: block;
+              margin-left: 0.3em;
+              transition: all 0.3s ease-in-out;
+            }
+
+            button svg {
+              display: block;
+              transform-origin: center center;
+              transition: transform 0.3s ease-in-out;
+            }
+
+            button:hover .svg-wrapper {
+              animation: fly-1 0.6s ease-in-out infinite alternate;
+            }
+
+            button:hover svg {
+              transform: translateX(1.2em) rotate(45deg) scale(1.1);
+            }
+
+            button:hover span {
+              transform: translateX(5em);
+            }
+
+            button:active {
+              transform: scale(0.95);
+            }
+
+            @keyframes fly-1 {
+              from {
+                transform: translateY(0.1em);
+              }
+
+              to {
+                transform: translateY(-0.1em);
+              }
+            }
+          }
+        }
+        .right {
+          @media screen and (max-width: 768px) {
+            margin-top: 2rem;
+          }
+          h2 {
+            font-family: "Roboto Slab", serif;
+            color: $main;
+            @media screen and (max-width: 768px) {
+              text-align: center;
+            }
+          }
+          iframe {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+// end contact
+// start sponsers
+.sponsers {
+  padding: 3rem 0;
+  .container {
+    .companies {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+      .company-1,
+      .company-2,
+      .company-3,
+      .company-4 {
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+// end sponsers
